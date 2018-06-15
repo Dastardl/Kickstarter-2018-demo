@@ -4,8 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { OverzichtComponent } from '../app/modules/blog/overzicht/overzicht.component';
 
+import { AmdinOverzichtComponent } from '../app/modules/admin/overzicht/overzicht.component';
+
 const routes: Routes = [
-  { path: '**', component: OverzichtComponent }
+  { path: 'admin', loadChildren: './modules/admin/admin.module#AdminModule' },
+  { path: 'blogs', component: OverzichtComponent }
 ];
 
 @NgModule({
